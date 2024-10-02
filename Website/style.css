@@ -1,0 +1,39 @@
+/* Setup of page */
+html, body {
+    background: lavender;
+}
+
+/* Header */
+h1 {
+    background-color: lavender;
+    font-size: x-large;
+    text-align: center;
+}
+
+h2, h3 {
+    background-color: #dda0dd7a;
+    text-align: center;
+    font-size: larger;
+    font-weight: 900;
+}
+
+/* Body */
+p {
+    font-size: large;
+    font-weight: 600;
+}
+
+a {
+    font-weight:400
+}
+/* ID Selection */
+#span1 {
+    font-size: large;
+}
+
+/* Footer */
+footer p {
+    font-size: smaller;
+    text-align: end;
+
+}
