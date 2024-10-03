@@ -50,3 +50,86 @@ header, footer {
 }
 
 /* WRITE YOUR CODE BELOW HERE */
+
+html {
+  font-size: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+h2, h3 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+p::first-line{
+  text-indent: 20px;
+}
+
+.container {
+  display:flex;
+  gap: 0.625%;
+}
+
+.container ul {
+  list-style-type: none;
+  padding: 0px;
+  width: 150px;
+  
+}
+
+.container a {
+  flex: 0;
+  text-decoration: none;
+  outline-color: transparent;
+  text-align: center;
+  line-height: 2;
+  font-size: 1.5rem;
+  color: #a66;
+  background-color: white;
+  border: 1px solid #a66;
+}
+
+.container a:link {
+  color:#a66;
+  text-decoration: none;
+}
+
+body {
+  line-height: 1.5rem;
+  letter-spacing: 0.7px;
+  word-spacing: 2px;
+}
+
+a:active {
+  color:red;
+}
+
+a:link {
+  color: blue;  
+}
+
+a:visited {
+  color: crimson;
+}
+
+a:hover, a:focus{
+  color:darkred;
+  text-decoration: none;
+  outline: none;
+}
+
+a[href^="http"]::after {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-left: 0.5em;
+
+  background-size: 100%;
+  background-image: url("external-link-52.png");
+}
