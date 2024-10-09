@@ -53,6 +53,7 @@ header, footer {
 
 html {
   font-size: 10px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 #wrapper {
@@ -71,43 +72,47 @@ h2, h3 {
   letter-spacing: 1px;
 }
 
-p::first-line{
+.firstsentence {
   text-indent: 20px;
 }
 
-
-.container {
-  display:flex;
-  flex-direction: column;
-  gap: 0.625%;
-}
-
-.container ul {
-  flex: 1;
+.container li {
+  display:block;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 15px;
+  outline-color: transparent;
   list-style-type: none;
-  padding: 0px;
+  background-color: white;
+  border: 1px solid #a66;
+  font-size: 1.5rem;
+  
 }
 
 .container a {
-  text-decoration: none;
-  outline-color: transparent;
-  text-align: center;
   line-height: 2;
-  font-size: 1.5rem;
+  text-decoration: none;
   color: #a66;
-  background-color: white;
-  border: 1px solid #a66;
 }
 
 .container a:link {
   color:#a66;
-  text-decoration: none;
 }
 
 body {
   line-height: 1.5rem;
-  letter-spacing: 0.7px;
-  word-spacing: 2px;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+}
+
+section li {
+  list-style-type: square;
+  line-height: 1.5rem;
+}
+
+aside li {
+  list-style-type: circle;
+  line-height: 1.5rem;
 }
 
 a:active {
@@ -115,15 +120,15 @@ a:active {
 }
 
 a:link {
-  color: blue;  
+  color: darkred;  
 }
 
 a:visited {
-  color: crimson;
+  color: #993d00;
 }
 
 a:hover, a:focus{
-  color:darkred;
+  color: #ff6600;
   text-decoration: none;
   outline: none;
 }
