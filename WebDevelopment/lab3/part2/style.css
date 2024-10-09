@@ -8,19 +8,19 @@ html {
 
 /* Your CSS below here */
 div {
-  background: linear-gradient(0.40turn, #cc00ff, #9b17bd, #000000);
-  background-color: purple;
+  display:block;
+  background: linear-gradient(0.40turn, #00000000, #00000013, #00000042);
+  background-color: #e00ae0;
   background-size: 100%;
+  border: 1px solid #790879;
+  border-radius: 10px;
   width: 200px;
   height:200px;
   margin-left: auto;
   margin-right: auto;
-  vertical-align: middle;
+  text-shadow: 2px 2px 2px black;
+  box-shadow: 1.5px 1.5px 1.5px black;
   text-align:center;
   color:white;
-  border: 1px, #9b17bd;
-  border-radius: 10px;
-  box-shadow: 5px, 5px, 5px, black;
-  font-size: 1.5rem;
-  text-shadow: black
+  font-size: 1.4rem; /* Calculated with px to REM calculator */
 }
