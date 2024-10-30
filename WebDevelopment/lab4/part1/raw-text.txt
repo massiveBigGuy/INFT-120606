@@ -1,3 +1,8 @@
+<!-- Name: Spencer Fevreau
+File: raw-text.txt
+Date: 30 October 2024
+raw-text.txt for part 1 lab 4 - Web Development Fundamentals INFT 1206-06  -->
+
 1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS
 
 const customName = document.getElementById('customname');

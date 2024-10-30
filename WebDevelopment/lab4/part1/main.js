@@ -1,3 +1,8 @@
+/* Name: Spencer Fevreau
+File: main.js
+Date: 30 October 2024
+main.js for part 1 lab 4 - Web Development Fundamentals INFT 1206-06
+*/
 const customName = document.getElementById('customname');
 const randomize = document.querySelector('.randomize');
 const story = document.querySelector('.story');
