@@ -1,3 +1,8 @@
+// Name: Spencer Fevreau
+// File: index.html
+// Date: 13 November 2024
+// main.js for part 2 lab 4 - Web Development Fundamentals INFT 1206-06
+
 const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
 
