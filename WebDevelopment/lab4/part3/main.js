@@ -1,3 +1,8 @@
+// Name: Spencer Fevreau
+// File: main.js
+// Date: 13 November 2024
+// main.js for part 3 lab 4 - Web Development Fundamentals INFT 1206-06
+
 // setup canvas
 
 const canvas = document.querySelector("canvas");
