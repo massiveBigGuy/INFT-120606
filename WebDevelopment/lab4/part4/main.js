@@ -3,9 +3,9 @@
 // Date: 20 November 2024
 // main.js for part 4 lab 4 - Web Development Fundamentals INFT 1206-06
 
+let counter = 0;
 // Declare constants
 const para = document.querySelector('p');
-let counter = 0;
 
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
@@ -158,6 +158,9 @@ class EvilCircle extends Shape {
 }
 
 const balls = [];
+// Create the evilBall constant to be used in the loop.
+const evilBall = new EvilCircle(random(0, width), random(0, height));
+
 // Generates new balls when less than 25 balls on screen
 while (balls.length < 25) {
   const size = random(10, 20);
@@ -175,8 +178,6 @@ while (balls.length < 25) {
   counter++;
   para.textContent = "Ball count: " + counter;
 }
-
-const evilBall = new EvilCircle(random(0, width), random(0, height));
 
 // Draw elements loop
 function loop() {
