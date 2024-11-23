@@ -4,6 +4,9 @@
 // main.js for part 4 lab 4 - Web Development Fundamentals INFT 1206-06
 
 // Declare constants
+const para = document.querySelector('p');
+let counter = 0;
+
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -70,19 +73,20 @@ class Ball extends Shape {
   // Detect ball collisions to change colour when collision between balls happens.
   collisionDetect() {
     for (const ball of balls) {
-      if (this !== ball) {
-        const dx = this.x - ball.x;
-        const dy = this.y - ball.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-  
-        if (distance < this.size + ball.size) {
-          ball.color = this.color = randomRGB();
-        }
-      }
+       if (!(this === ball) && ball.exists) {
+          const dx = this.x - ball.x;
+          const dy = this.y - ball.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < this.size + ball.size) {
+            ball.color = this.color = randomRGB();
+          }
+       }
     }
-  }
-  
+ }
+
 }
+
 // Create EvilCircle shape, adds an event listener for control keystrokes.
 class EvilCircle extends Shape {
   constructor(x,y) {
@@ -145,8 +149,8 @@ class EvilCircle extends Shape {
 
         if (distance < this.size + ball.size) {
           ball.exists = false;
-          count--;
-          para.textContent = 'Ball count: ' + count;
+          counter--;
+          para.textContent = "Ball count: " + counter;
         }
       }
     }
@@ -164,25 +168,34 @@ while (balls.length < 25) {
     random(-7, 7),
     random(-7, 7),
     randomRGB(),
-    size,
+    size
   );
 
   balls.push(ball);
+  counter++;
+  para.textContent = "Ball count: " + counter;
 }
 
-// Draw balls loop
+const evilBall = new EvilCircle(random(0, width), random(0, height));
+
+// Draw elements loop
 function loop() {
-  ctx.fillStyle = "rgb(0 0 0 / 25%)";
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
-    ball.draw();
-    ball.update();
-    ball.collisionDetect();
+    if (ball.exists) {
+      ball.draw();
+      ball.update();
+      ball.collisionDetect();
+    }
   }
-
+  evilBall.draw();
+  evilBall.checkBounds();
+  evilBall.collisionDetect();
+  
   requestAnimationFrame(loop);
 }
 
-// Begin the ball loop
+// Begin the game loop
 loop();
