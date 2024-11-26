@@ -1,3 +1,7 @@
+// Name: Spencer Fevreau
+// File: main.js
+// Date: 27 November 2024
+// Lab 5 - Web Development Fundamentals INFT 1206-06 
 // functionality for showing/hiding the comments section
 
 const showHideBtn = document.querySelector('.show-hide');
